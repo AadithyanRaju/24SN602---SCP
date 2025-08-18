@@ -4,3 +4,6 @@
 # list_ = [1, 2, 6, 55, 2, 'hi', 4, 6, 1, 13]
 # unique_list = [1, 2, 6, 55, 'hi', 4, 13,]
 
+sample_list =  [1, 2, 6, 55, 2, 'hi', 4, 6, 1, 13]
+
+print(f'{list(set(sample_list))}')

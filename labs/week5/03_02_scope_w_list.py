@@ -1,12 +1,13 @@
 # run the function below
 
-list_of_vowels = ["a", "e", "i", "o", "u"]
 
 
 def check_for_vowels(string_to_count):
     """
     Function will count if all vowels occur within the string
     """
+    
+    list_of_vowels = ["a", "e", "i", "o", "u"]
     for char in string_to_count:
         if char.lower() in list_of_vowels:
             list_of_vowels.remove(char)
@@ -28,7 +29,7 @@ print(check_for_vowels("The"))  # this should be False!
 # what is wrong?
 
 ## try printing list_of_vowels
-# print(list_of_vowels)
+#print(list_of_vowels)
 # why is it empty?
 
 ## Fix the function so this does not happen!

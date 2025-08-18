@@ -10,3 +10,4 @@ strong_password = "%8Ddb^ca<*'{9pur/Y(8n}^QPm3G?JJY}\(<bCGHv^FfM}.;)khpkSYTfMA@>
 
 # Now that you know what the longest word is, print it out in an f-string below
 
+print(max(longest_german_word, longest_hungarian_word, longest_finnish_word, strong_password, key=len))

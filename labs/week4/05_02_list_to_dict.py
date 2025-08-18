@@ -2,7 +2,8 @@
 
 # Write a Python program to convert the nested list to a list of dictionaries
 
-# Sample lists: [["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"]]
+# Sample lists: 
+sampleList = [["Black", "Red", "Maroon", "Yellow"], ["#000000", "#FF0000", "#800000", "#FFFF00"]]
 
 # Expected Output: [{'color_name': 'Black', 'color_code': '#000000'},
 #                   {'color_name': 'Red', 'color_code': '#FF0000'},
@@ -10,3 +11,4 @@
 #                   {'color_name': 'Yellow', 'color_code': '#FFFF00'}]
 
 # use a for-loop
+print([{'color_name': sampleList[0][i], 'color_code': sampleList[1][i]} for i in range(len(sampleList[0]))])

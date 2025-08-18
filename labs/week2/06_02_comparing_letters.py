@@ -12,3 +12,5 @@ print(ay > bee)
 # here is a hint: check out the ord() function
 # How does python store string characters under the hood?
 # look up what ord() does online and report back!
+
+print(f'ay = {ay}, bee = {bee}, ord(ay) = {ord(ay)}, ord(bee) = {ord(bee)}')

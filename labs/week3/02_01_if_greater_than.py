@@ -7,7 +7,14 @@
 first_number = input("please enter a number: ")
 second_number = input("please enter another number!: ")
 
-print(first_number)
+try :
+    first_number = int(first_number)
+    second_number = int(second_number)
+except ValueError:
+    print("Please enter valid integers.")
+    exit()
+
+print(f"Is {first_number} greater than {second_number}? {first_number > second_number}")
 
 ## note, what type is your first_number? Is it what you expected?
 ## look-up the input() documentation to find out what type it will create by default

@@ -22,3 +22,26 @@ The greedy Monkey followed the Fox to the trap. As soon as he saw the meat he gr
 Shortly after that, another election among the Animals was held.
 """
 
+def rotate_word(word):
+    if len(word) > 1:
+        return word[1:] + word[0] + "ay"
+    return word + "ay"
+
+def translate_to_pig_latin(text):
+    words = text.split()
+    pig_latin_words = []
+    
+    for word in words:
+        # Remove punctuation from the word
+        clean_word = ''.join(char for char in word if char.isalnum())
+        pig_latin_word = rotate_word(clean_word)
+        
+        # Preserve original punctuation
+        if len(word) > len(clean_word):
+            pig_latin_word += word[len(clean_word):]
+        
+        pig_latin_words.append(pig_latin_word)
+    
+    return ' '.join(pig_latin_words)
+
+print(translate_to_pig_latin(story))

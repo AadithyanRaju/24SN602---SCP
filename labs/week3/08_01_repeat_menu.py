@@ -10,3 +10,22 @@
 
 # If the option is other number: print it is an  invalid option
 
+while True:
+    option = input("Please enter an option (1-4): ")
+    try:
+        option = int(option)
+    except ValueError:
+        print("Please enter a valid integer.")
+        continue
+
+    if option == 1:
+        print("Here is your first step.")
+    elif option == 2:
+        print("You have some steps to go.")
+    elif option == 3:
+        print("You are almost done.")
+    elif option == 4:
+        print("Exiting the loop. Goodbye!")
+        break
+    else:
+        print("It is an invalid option.")

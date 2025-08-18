@@ -11,3 +11,4 @@
 
 # now print out all the `bool()` values using the bool() function
 # are you surprised at the default boolean value for any python type?
+[print(x, type(x), bool(x)) for x in [3, 2.7, "hello", 0, 1, 1000]]

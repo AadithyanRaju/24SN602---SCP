@@ -10,6 +10,7 @@ x = 100
 
 
 def add_to_me(num):
+    x = 5
     y = num + x
     print(f"x inside the function is: {x}")
     return y

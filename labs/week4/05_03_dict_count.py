@@ -4,3 +4,12 @@
 # Track the count of the letters from the string.
 # Sample string : 'securecoding'
 # Expected output: {'s': 1, 'e': 2, 'c': 2, 'u': 1, 'r': 1, 'o': 1, 'd': 1, 'i': 1, 'n': 1, 'g': 1}
+
+string = 'securecoding'
+count = {}
+for i in string:
+    if i in count.keys():
+        count[i] += 1
+    else:
+        count[i] = 1
+print(count)

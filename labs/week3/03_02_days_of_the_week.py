@@ -13,3 +13,28 @@
 #If the input is 6 print "Saturday"
 
 #Use if-else statements
+
+number = input("Please enter an integer number less than 7: ")
+try:
+    number = int(number)
+except ValueError:
+    print("Please enter a valid integer.")
+    exit()
+if number >= 7:
+    print("Error: The number must be less than 7.")
+else:
+    #print(f"The day of the week is: {"SMTWTFSuouehrannedritddsnuduaadesaryyasdyd  yda a   ay y   y"[number::7]}")
+    if number == 0:
+        print("Sunday")
+    elif number == 1:
+        print("Monday")
+    elif number == 2:
+        print("Tuesday")
+    elif number == 3:
+        print("Wednesday")
+    elif number == 4:
+        print("Thursday")
+    elif number == 5:
+        print("Friday")
+    else:
+        print("Saturday")

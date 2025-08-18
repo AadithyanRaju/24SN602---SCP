@@ -20,3 +20,5 @@ for i in range(list_length):
 
 # example input :[1,2,5,1,2]
 # example output :[(1,1), (2,2), (5,0)]
+print(len(randlist))
+print([(x,y) for x, y in zip(sorted(randlist)[::2]+([0] if len(randlist)&1==1 else []), sorted(randlist)[1::2]+([0] if len(randlist)&1==1 else []))] )

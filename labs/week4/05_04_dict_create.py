@@ -3,3 +3,4 @@
 # result = {1: 1, 2: 4, 3: 9, ... and so on}
 
 # use a for-loop
+print({x:x*x for x in range(1,11)})

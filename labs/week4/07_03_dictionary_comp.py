@@ -4,3 +4,5 @@
 
 # Use a comprehension to make this easy
 
+
+print({x:x*x for x in range(1,11)})
