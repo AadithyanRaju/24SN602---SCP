@@ -21,3 +21,15 @@ many_nests = ["a", ["bb", ["ccc", "ddd"], "ee", "ff"], "g", "h"]
 # should get back
 # ['a', 'bb', 'ccc', 'ddd', 'ee', 'ff', 'g', 'h']
 
+
+def deepFlatten(nlist):
+    flatList = []
+    for element in nlist:
+        if isinstance(element, list) or isinstance(element, tuple):
+            flatList.extend(deepFlatten(element))
+        else:
+            flatList.append(element)
+    return flatList
+
+print(deepFlatten(hard_nested_list))
+print(deepFlatten(many_nests))
