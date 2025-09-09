@@ -12,5 +12,7 @@
 # output: 6
 
 
-def sum_ints():
-    pass
+def sum_ints(*args):
+    return sum(i for i in args if isinstance(i, int))
+
+print(sum_ints(1,2,3,4,'hi','hi',(1,2,3), 10))  

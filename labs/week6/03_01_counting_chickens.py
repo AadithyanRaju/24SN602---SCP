@@ -23,33 +23,35 @@ within the loop have your chickens all try to lay eggs
 Afterwards, print out how many total eggs were hatched -- for all chickens and individually.
 What was the average number of eggs per chicken?
 """
-from random import randint
+from random import randint, choice
 class Chicken:
-    time_of_day = 601
+    time_of_day = 600
     number_of_eggs_laid = 0
 
-    def __init__(self, breed:str = "Rooster", gender:str = "female", weight:float = 12.0, lays_eggs:bool = True):
+    def __init__(self, breed:str = "Rooster", gender:str = "female", weight:float = 12.0):
         self.breed = breed
         self.gender = gender
         self.weight = weight
-        self.lays_eggs = False if gender.lower == "male" else lays_eggs
+        self.lays_eggs = False if gender == "male" else True
         self.laid_eggs = 0
 
-    def lay_egg(self,time_of_day:int = 1000):
-        if time_of_day > 600 and time_of_day < 2000 :
+    def lay_egg(self):
+        if not self.lays_eggs:
+            return
+        if Chicken.time_of_day > 600 and Chicken.time_of_day < 2000 :
             return    
         flag = 1 if randint(0,1) else 0
-        self.number_of_eggs_laid += flag
+        Chicken.number_of_eggs_laid += flag
         self.laid_eggs += flag
 
 chickens = []
 for i in range(100):
-    chickens.append(Chicken())
+    chickens.append(Chicken(gender=choice(["female", "male"])))
 
 for hour in range(24):
     Chicken.time_of_day = hour*100
     for chicken in chickens:
-        chicken.lay_egg(Chicken.time_of_day)
+        chicken.lay_egg()
 
 total_eggs = 0
 for chicken in chickens:

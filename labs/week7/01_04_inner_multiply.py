@@ -3,3 +3,12 @@
 
 # example input: (1,2), (2,2), (3,2), (4,5)
 # output: [2,4,6,20]
+
+def fun(*args:tuple) -> list:
+    result = []
+    for i in args:
+        result+=[i[0]*i[1]]
+    return result
+
+
+print(fun((1,2), (2,2), (3,2), (4,5)))
