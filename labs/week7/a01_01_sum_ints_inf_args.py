@@ -10,9 +10,10 @@
 # example 2
 # input: 2,2,2,200.2           # **note*** that 200.2 is _not_ an integer, so we don't sum it.
 # output: 6
-
+sample_input = (1,2,3,4,'hi','hi',(1,2,3), 10)
 
 def sum_ints(*args):
     return sum(i for i in args if isinstance(i, int))
 
-print(sum_ints(1,2,3,4,'hi','hi',(1,2,3), 10))  
+if __name__ == "__main__":
+    print(sum_ints(1,2,3,4,'hi','hi',(1,2,3), 10))  

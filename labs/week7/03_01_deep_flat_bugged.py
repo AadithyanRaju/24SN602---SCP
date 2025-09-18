@@ -25,16 +25,17 @@ many_nests = ["a", ["bb", ["ccc", "ddd"], "ee", "ff"], "g", "h"]
 final_list = []
 while True:
     for element in hard_nested_list:
-        if isinstance(element, (list, tuple, str)):
-            final_list.append(element)
+        if isinstance(element, (list, tuple)):
+            final_list.extend(element)
         elif isinstance(element, (int, float, str)):
             final_list.append(element)  # string,
 
     for elem in final_list:
-        if isinstance(element, (tuple, list)):
-            hard_nested_list = []
-            final_list = hard_nested_list
+        if isinstance(elem, (tuple, list)):
+            hard_nested_list = final_list.copy()
+            final_list = []
             break  # the else below will not execute, we repeat the while loop
     else:  # no break!!! only executes if for loop finishes
         break
 
+print(final_list)
