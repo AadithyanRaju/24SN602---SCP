@@ -10,3 +10,9 @@ if an error happens.
 The purpose of this exercise is to just practice observing that
 """
 
+try:
+    print(1 / 0)
+except ZeroDivisionError:
+    print("Caught a division by zero error.")
+finally:
+    print("This will always print, even if an error occurs above.")

@@ -8,10 +8,11 @@ def add_em_up(*args):
     my_sum = 0
     for item in args:
         try:
-            sum += item
+            my_sum += item
         except TypeError:
-            pass
-            # do something here
+            print(f"TypeError: Cannot add {item} of type {type(item)}")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
     return my_sum
 
 

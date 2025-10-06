@@ -39,15 +39,22 @@ def fun2(name, job, *args, **kwargs):
    result2 = f" {name} has"
    if kwargs:
       for key, value in kwargs.items():
-         result2 += f" a {key} worth {value},"
+         if key[0] in "aeiou":
+            result2 += f" an {key} worth {value},"
+         else:
+            result2 += f" a {key} worth {value},"
       result2 = result2[:-1] + "."
       commaCount = result2.count(",")
       if commaCount>=1:
          i = -1
          while result2[i]!= ',':
             i-=1
-         result2 = result2[:i] + " and" + result2[i+1:]
+         result2 = result2[:i] + " and" + result2[i+3:]
       return result + result2
    return result
 
-print(fun2('Gilad', 'teacher', 'happy', 'amazing', 'sooooo cool', bike = 2000, house = 1000, shoes = 20))
+#print(fun2('Gilad', 'teacher', 'happy', 'amazing', 'sooooo cool', bike = 2000, house = 1000, shoes = 20))
+#print(fun2('Gilad', 'teacher', 'happy', 'amazing', 'sooooo cool'))
+print(fun2('Gilad', 'teacher', 'happy'))
+#print(fun2('Gilad', 'teacher',  bike = 2000, house = 1000, shoes = 20))
+print(fun2('Gilad', 'teacher',  bike = 2000))

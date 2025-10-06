@@ -12,3 +12,10 @@ Iterate over the args summing them up.
 Use an if statement ot check if the user passed tuples.
 Raise an exception if they passed something else
 """
+
+def fun(*args:tuple) -> list:
+    result = []
+    for i in args:
+        if isinstance(i, tuple) and len(i) == 2:result+=[i[0]*i[1]]
+        else:raise Exception("Tuple must have exactly two elements")
+    return result
