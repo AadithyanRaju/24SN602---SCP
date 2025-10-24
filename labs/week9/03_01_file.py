@@ -16,4 +16,28 @@ The second way is fine for quick scripts though
 5. 
 
 """
+from pathlib import Path
 
+pathObj = Path.cwd() / "labs" / "week9" / "winnie_pooh.txt"
+path = '/home/aadithyan/github/24SN602---SCP/labs/week9/winnie_pooh.txt'
+
+f = open(path, 'r')
+print(f"first line = {f.readline()}")
+f.close()
+
+f = open(path, 'r')
+print('Full')
+for line in f.readlines():
+    print(line)
+f.close()
+
+
+f = open(path, 'r')
+print('Last')
+print(f.readlines()[-1])
+f.close()
+
+f = open(path, 'a')
+f.write('I AM A NEW SENTENCE!')
+f.flush()
+f.close()

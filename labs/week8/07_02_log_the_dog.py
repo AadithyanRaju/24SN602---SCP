@@ -20,12 +20,13 @@ def helpDoc():
 parser = argparse.ArgumentParser(description="Set the logging level.")
 parser.add_argument(
     "--log",
-    type=str,
+    type=int,
     default="WARNING",
     help="Set the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)",
 )
 args = parser.parse_args()
-logging.basicConfig(level=args.log.upper(), format='%(asctime)s - %(levelname)s - %(message)s')
+levels=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']
+logging.basicConfig(level=levels[args.log-1]C, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class Dog:
     def __init__(self, limbs=None, eyes=None, color=None, kindness=None):

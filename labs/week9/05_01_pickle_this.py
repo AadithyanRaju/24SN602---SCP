@@ -29,4 +29,6 @@ class Car:
 my_car = Car(4, 'blue', True)
 # pickle your instance of the car
 
-
+import pickle
+with open('mycar', 'wb') as f:
+    pickle.dump(my_car, f)

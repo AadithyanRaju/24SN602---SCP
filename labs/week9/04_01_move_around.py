@@ -10,3 +10,26 @@ Path.glob(“*”)  returns a generator that you can use to iterate over all fil
 Path.iterdir()
 
 """
+
+from pathlib import Path
+import os
+path = Path.cwd()
+while True:
+    print('''
+-----MENU-----
+1. Print Working Directory
+2. List Working Directory
+3. Change Working Directory
+4. Exit
+--------------
+''')
+    ch = int(input('Enter Choice: '))
+    if ch == 4: break
+    elif ch == 1: print(path)
+    elif ch == 2: print(os.listdir(path))
+    elif ch == 3 :
+        newpath = input()
+        if newpath in os.listdir() : path /= newpath
+        elif newpath[0] == '/' : 
+            os.chdir(newpath)
+            path = os.path
