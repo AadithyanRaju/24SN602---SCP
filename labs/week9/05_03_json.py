@@ -4,7 +4,7 @@ Use JSON to serialize the following dictionary
 """
 import json
 
-my_dict = {i: i ** 2 for i in range(10_000)}
+my_dict = {i: i ** 2 for i in range(10000)}
 
 with open('w9.json', 'w') as f:
     json.dump(my_dict, f)
