@@ -25,3 +25,4 @@ class Car:
 with open('mycar', 'rb') as f:
     my_car = pickle.load(f)
 
+print(my_car.num_tires)
