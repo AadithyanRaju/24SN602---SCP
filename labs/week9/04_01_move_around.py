@@ -16,13 +16,13 @@ import os
 path = Path.cwd()
 while True:
     print('''
------MENU-----
-1. Print Working Directory
-2. List Working Directory
-3. Change Working Directory
-4. Exit
---------------
-''')
+        -----MENU-----
+        1. Print Working Directory
+        2. List Working Directory
+        3. Change Working Directory
+        4. Exit
+        --------------
+        ''')
     ch = int(input('Enter Choice: '))
     if ch == 4: break
     elif ch == 1: print(path)
